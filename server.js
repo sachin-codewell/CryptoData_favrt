@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const logger = require('morgan');
 const port = 5000;
-const Favorite_URL = 'mongodb://localhost:27017/FavoriteCryptoDB';
+const FavrtURI= "mongodb+srv://sachinyadav:hhLSFuQifzTN2vfi@cryptodata-cluster.k3k13nu.mongodb.net/CryptoData?retryWrites=true&w=majority";
 
 const app = express();
 app.use(logger('dev'));
@@ -20,7 +20,7 @@ app.use('/api',favoriteRoutes)
 
 
 
-mongoose.connect(Favorite_URL);
+mongoose.connect(FavrtURI);
 mongoose.connection.once('open', () => {
     console.log('Connected to server');
 }).on('error', (err) => {
