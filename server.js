@@ -4,7 +4,7 @@ const favoriteRoutes = require('./FavoriteRoutes/favoriteRoutes')
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const logger = require('morgan');
-const port = procees.env.PORT||5000;
+const port = process.env.PORT||5000;
 const FavrtURI= "mongodb+srv://sachinyadav:hhLSFuQifzTN2vfi@cryptodata-cluster.k3k13nu.mongodb.net/CryptoData?retryWrites=true&w=majority";
 
 const app = express();
